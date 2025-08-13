@@ -14,17 +14,6 @@ export default function CTA() {
     "idle" | "success" | "error"
   >("idle");
 
-  // const generateId = () => {
-  //   return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
-  //     /[xy]/g,
-  //     function (c) {
-  //       const r = (Math.random() * 16) | 0;
-  //       const v = c === "x" ? r : (r & 0x3) | 0x8;
-  //       return v.toString(16);
-  //     }
-  //   );
-  // };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);

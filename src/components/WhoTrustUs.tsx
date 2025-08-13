@@ -10,10 +10,7 @@ export default function WhoTrustUs() {
   return (
     <section className="py-16 px-4 bg-white">
       <div className="container mx-auto max-w-6xl">
-        <h2
-          className="text-3xl md:text-4xl font-bold text-gray-900 mb-8"
-          data-aos="fade-up"
-        >
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
           Development Supported By
         </h2>
 
@@ -22,8 +19,6 @@ export default function WhoTrustUs() {
             <div
               key={idx}
               className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 flex items-center justify-center h-32"
-              data-aos="zoom-in"
-              data-aos-delay={100 + idx * 50}
             >
               <div className="relative w-full h-full flex items-center justify-center">
                 <Image
