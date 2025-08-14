@@ -66,7 +66,7 @@ export default function Hero() {
         <DialogContent className="min-w-1/2 p-4 bg-white rounded-xl">
           <div className="relative w-full mt-8 h-[50vh] rounded overflow-hidden">
             <iframe
-              src="https://www.youtube.com/embed/1LEJFnAahMQ?autoplay=1&embeds_referring_euri=https%3A%2F%2Fwww.tarteeb.uz%2F&source_ve_path=MjM4NTE"
+              src="https://www.youtube.com/embed/dx9Cmx-arJM?autoplay=1&embeds_referring_euri=https%3A%2F%2Fwww.tarteeb.uz%2F&source_ve_path=MjM4NTE"
               title="Tarteeb Demo Video"
               className="absolute top-0 left-0 w-full h-full"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media;"

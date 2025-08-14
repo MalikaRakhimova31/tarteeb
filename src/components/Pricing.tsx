@@ -30,7 +30,7 @@ export default function Pricing() {
     {
       name: "Enterprise",
       price: frequency == "monthly" ? "$120" : "$100",
-      period: frequency == "monthly" ? "monthly" : "yearly",
+      period: "monthly",
       description: "Everything you need to build successful study center",
       features: [
         "Your branded bot",
