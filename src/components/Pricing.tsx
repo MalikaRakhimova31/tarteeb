@@ -1,9 +1,14 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useState } from "react";
 
 export default function Pricing() {
+  const [frequency, setFrequency] = useState<string>("monthly");
   const plans = [
     {
       name: "Solo Teacher",
@@ -24,9 +29,8 @@ export default function Pricing() {
     },
     {
       name: "Enterprise",
-      price: "$120",
-      period: "monthly",
-      discount: "Paid Yearly at $100 • 20% off",
+      price: frequency == "monthly" ? "$120" : "$100",
+      period: frequency == "monthly" ? "monthly" : "yearly",
       description: "Everything you need to build successful study center",
       features: [
         "Your branded bot",
@@ -84,6 +88,28 @@ export default function Pricing() {
                 <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
                   {plan.name}
                 </CardTitle>
+                <div className="flex justify-center w-full py-2">
+                  {plan.popular && (
+                    <Tabs
+                      className=""
+                      defaultValue={frequency}
+                      onValueChange={setFrequency}
+                    >
+                      <TabsList>
+                        <TabsTrigger
+                          className="p-1 text-[12px]"
+                          value="monthly"
+                        >
+                          Monthly
+                        </TabsTrigger>
+                        <TabsTrigger value="yearly" className="p-1 text-[12px]">
+                          Yearly
+                          <Badge variant="secondary">20% off</Badge>
+                        </TabsTrigger>
+                      </TabsList>
+                    </Tabs>
+                  )}
+                </div>
                 <div>
                   <span className="text-4xl md:text-5xl font-bold text-gray-900">
                     {plan.price}
