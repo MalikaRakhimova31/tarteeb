@@ -8,7 +8,7 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
 
 export default function Pricing() {
-  const [frequency, setFrequency] = useState<string>("monthly");
+  const [frequency, setFrequency] = useState<string>("yearly");
   const plans = [
     {
       name: "Solo Teacher",
@@ -119,7 +119,7 @@ export default function Pricing() {
                     <span className="text-gray-600 ml-2">/{plan.period}</span>
                   )}
                 </div>
-                {<p className="text-sm text-[#6366F1]">{plan.discount}</p>}
+
                 <p className="text-gray-600">{plan.description}</p>
               </CardHeader>
 
