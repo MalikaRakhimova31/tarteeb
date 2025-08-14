@@ -47,7 +47,7 @@ export default function Navigation() {
               href="#features"
               className="text-gray-600 hover:text-gray-900 transition-colors"
             >
-              Features
+              Products
             </a>
             <a
               href="#pricing"
@@ -61,17 +61,17 @@ export default function Navigation() {
             >
               Reviews
             </a>
-            <a
+            {/* <a
               href="#"
               className="text-gray-600 hover:text-gray-900 transition-colors"
             >
               Blog
-            </a>
+            </a> */}
             <a
               href="#"
               className="text-gray-600 hover:text-gray-900 transition-colors"
             >
-              Support
+              Contact Us
             </a>
           </div>
 
@@ -87,7 +87,7 @@ export default function Navigation() {
             </Link>
             <Link href="#pricing">
               <Button className="bg-purple-600 hover:bg-purple-700">
-                Get Free Trial
+                See Pricing
               </Button>
             </Link>
           </div>
@@ -111,7 +111,7 @@ export default function Navigation() {
               ></span>
               <span
                 className={`w-4 h-0.5 bg-gray-600 transition-all duration-300 mt-1 ${
-                  isMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+                  isMenuOpen ? "-rotate-45 -translate-y-2.5" : ""
                 }`}
               ></span>
             </div>
@@ -126,7 +126,7 @@ export default function Navigation() {
                 href="#features"
                 className="text-gray-600 hover:text-gray-900 transition-colors py-2"
               >
-                Features
+                Products
               </a>
               <a
                 href="#pricing"
@@ -140,17 +140,17 @@ export default function Navigation() {
               >
                 Reviews
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="text-gray-600 hover:text-gray-900 transition-colors py-2"
               >
                 Blog
-              </a>
+              </a> */}
               <a
                 href="#"
                 className="text-gray-600 hover:text-gray-900 transition-colors py-2"
               >
-                Support
+                Contact us
               </a>
               <div className="flex flex-col gap-2 pt-4 border-t border-gray-200">
                 <Link href={"https://portal.tarteeb.uz/login"}>
@@ -161,9 +161,11 @@ export default function Navigation() {
                     Sign In
                   </Button>
                 </Link>
-                <Button className="bg-purple-600 hover:bg-purple-700">
-                  Get Started Free
-                </Button>
+                <Link href="#pricing">
+                  <Button className="bg-purple-600 hover:bg-purple-700">
+                    See Pricing
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

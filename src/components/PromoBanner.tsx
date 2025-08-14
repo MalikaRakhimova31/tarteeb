@@ -42,10 +42,10 @@ export default function PromoBanner() {
             <div className="flex items-center justify-center gap-4 flex-1">
               <div className="flex items-center gap-2">
                 <span className="animate-pulse">🎉</span>
-                <span className="font-medium text-[#111111]">
-                  Join our Telegram Channel -
+                <span className="font-medium text-[#111111] text-sm md:text-md">
+                  Join our Telegram Channel
                 </span>
-                <span className="text-[#111]">
+                <span className="text-[#111] hidden md:block">
                   a cozy campfire where innovative educators gather to share
                   their experiences with AI.
                 </span>

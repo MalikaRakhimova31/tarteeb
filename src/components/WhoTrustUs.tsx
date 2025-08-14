@@ -8,7 +8,7 @@ export default function WhoTrustUs() {
   ];
 
   return (
-    <section className="py-16 px-4 bg-white">
+    <section className="py-8 md:py-16 px-4 bg-white">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
           Development Supported By

@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Pricing() {
   const plans = [
     {
-      name: "Free",
+      name: "Solo Teacher",
       price: "Free",
       period: "forever",
       description:
@@ -44,7 +44,7 @@ export default function Pricing() {
   ];
 
   return (
-    <section id="pricing" className="py-20 px-4 bg-gray-50">
+    <section id="pricing" className="py-10 md:py-20 px-4 bg-gray-50">
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
         <div
@@ -62,13 +62,13 @@ export default function Pricing() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="flex item justify-center gap-8">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8">
           {plans.map((plan, index) => (
             <Card
               data-aos="zoom-out"
               data-aos-delay="200"
               key={index}
-              className={`relative group hover:shadow-xl transition-all duration-300 w-[35%] ${
+              className={`relative group hover:shadow-xl transition-all duration-300 w-[90%] md:w-[35%] ${
                 plan.popular
                   ? "border-1 border-purple-500 shadow-lg scale-105"
                   : "border-gray-200 hover:border-purple-200"
@@ -80,7 +80,7 @@ export default function Pricing() {
                 </Badge>
               )}
 
-              <CardHeader className="text-center pb-8">
+              <CardHeader className="text-center pb-4 md:pb-8">
                 <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
                   {plan.name}
                 </CardTitle>

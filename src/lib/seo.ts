@@ -45,4 +45,9 @@ export const defaultSEO: Metadata = {
     creator: "tarteeb team",
   },
   metadataBase: new URL("https://tarteeb.uz"),
+  icons: {
+    icon: "/favicon.svg", // For browsers
+    shortcut: "/favicon.svg", // Optional, older browser shortcut
+    apple: "/logo.jpg", // For iOS home screen
+  },
 };

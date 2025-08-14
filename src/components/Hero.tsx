@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
+import { Dialog, DialogContent } from "./ui/dialog";
 import { useState } from "react";
 import { X } from "lucide-react";
 
@@ -14,7 +14,7 @@ export default function Hero() {
       <section className="relative bg-gradient-to-br from-purple-50 via-white to-blue-50 py-20 px-4">
         <div className="container mx-auto max-w-6xl text-center">
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-3xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             {/* Welcome to */}
             <Image
               src={"/images/tarteeb.svg"}
@@ -45,7 +45,7 @@ export default function Hero() {
               size="lg"
               className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 text-lg"
             >
-              Get Free Trial
+              See Pricing
             </Button>
             <Button
               variant="outline"
