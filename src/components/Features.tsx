@@ -9,33 +9,16 @@ export default function Features() {
           {/* Right Side - Images */}
           <div className="w-full md:w-[60%] space-y-6 flex relative items-start justify-center">
             <div
-              className="relative md:absolute top-0 md:left-10 z-0"
+              className="relative md:absolute top-0 md:left-10 z-0 scale-x-[-1]"
               data-aos="fade-right"
               data-aos-delay="400"
             >
               <Image
                 src="/images/admin-1.webp"
                 alt="Admin Panel Dashboard"
-                width={600}
+                width={800}
                 height={600}
-                className="rounded-lg shadow border border-gray-200"
-                layout="responsive"
-              />
-              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div> */}
-            </div>
-
-            <div
-              className="relative md:absolute md:z-10 md:top-50 md:-left-10 "
-              data-aos="fade-right"
-              data-aos-delay="600"
-            >
-              <Image
-                src="/images/admin-2.webp"
-                alt="Admin Panel Analytics"
-                width={600}
-                height={400}
-                className="hidden md:block rounded-lg shadow-lg border border-gray-200"
-                layout="responsive"
+                // layout="responsive"
               />
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div> */}
             </div>

@@ -68,31 +68,15 @@ export default function Showcase() {
           {/* Right Side - Images */}
           <div className="w-full md:w-[60%] space-y-6 flex relative items-start justify-center gap-6 md:gap-0">
             <div
-              className="relative md:absolute top-0 md:left-20 z-0 md:z-10"
+              className="relative md:absolute -top-20 md:left-0 z-0 md:z-10"
               data-aos="fade-up"
               data-aos-delay="200"
             >
               <Image
                 src="/images/lexi.webp"
                 alt="Admin Panel Dashboard"
-                width={250}
+                width={600}
                 height={300}
-                className="rounded-lg shadow border border-gray-200"
-              />
-              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div> */}
-            </div>
-
-            <div
-              className="relative md:absolute  z-0 md:top-20 md:left-70"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
-              <Image
-                src="/images/alex.webp"
-                alt="Admin Panel Analytics"
-                width={250}
-                height={300}
-                className="rounded-lg shadow border border-gray-200"
               />
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div> */}
             </div>
