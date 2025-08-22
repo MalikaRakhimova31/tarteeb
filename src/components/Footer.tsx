@@ -1,10 +1,8 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-16 px-4">
-      {/* <footer className="bg-[#004068] text-white py-16 px-4"> */}
       <div className="container mx-auto max-w-6xl">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-2 justify-start gap-8 mb-12">

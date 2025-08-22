@@ -5,7 +5,6 @@ import Image from "next/image";
 
 import { Dialog, DialogContent } from "./ui/dialog";
 import { useState } from "react";
-import { X } from "lucide-react";
 
 export default function Hero() {
   const [open, setOpen] = useState(false);

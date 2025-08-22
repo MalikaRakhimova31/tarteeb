@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
-import NumberFlow, { type Value } from "@number-flow/react";
+import NumberFlow from "@number-flow/react";
 
 export default function Pricing() {
   const [frequency, setFrequency] = useState<string>("yearly");
