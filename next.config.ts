@@ -1,14 +1,10 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === "production";
-
 const nextConfig: NextConfig = {
-  output: "export", // enables static export for GitHub Pages
-  basePath: isProd ? "/tarteeb-landing" : "",
-  assetPrefix: isProd ? "/tarteeb-landing/" : "",
+  reactStrictMode: true,
+  // remove output: "export", basePath, assetPrefix
   images: {
-    unoptimized: true, // disable next/image optimization (needed for static export)
+    unoptimized: false, // let Vercel handle images
   },
 };
-
 export default nextConfig;
