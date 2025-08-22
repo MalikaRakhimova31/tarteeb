@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export default function Footer() {
@@ -21,7 +20,7 @@ export default function Footer() {
               Transform your workflow with intelligent task management that
               adapts to your team&apos;s needs.
             </p>
-            <div className="flex gap-4">
+            {/* <div className="flex gap-4">
               <Button
                 variant="ghost"
                 size="sm"
@@ -50,7 +49,7 @@ export default function Footer() {
               >
                 <span className="text-xl">📧</span>
               </Button>
-            </div>
+            </div> */}
           </div>
 
           {/* Product Links */}

@@ -17,7 +17,7 @@ export const defaultSEO: Metadata = {
     "Student",
     "Education center",
   ],
-  authors: [{ name: "Elbek" }],
+  authors: [{ name: "Tarteeb team" }],
   creator: "tarteeb team",
   openGraph: {
     type: "website",
@@ -29,7 +29,7 @@ export const defaultSEO: Metadata = {
       "AI-Powered Classroom Tools for Speaking, Writing & Assessment",
     images: [
       {
-        url: "/images/logo-gradient.jpg",
+        url: "/logo-gradient.jpg",
         width: 1200,
         height: 630,
         alt: "Tarteeb.uz",
@@ -41,8 +41,13 @@ export const defaultSEO: Metadata = {
     title: "Tarteeb.uz",
     description:
       "AI-Powered Classroom Tools for Speaking, Writing & Assessment",
-    images: ["/images/logo-gradient.jpg"],
+    images: ["/logo-gradient.jpg"],
     creator: "tarteeb team",
   },
   metadataBase: new URL("https://tarteeb.uz"),
+  icons: {
+    icon: "/favicon.svg", // For browsers
+    shortcut: "/favicon.svg", // Optional, older browser shortcut
+    apple: "/logo.jpg", // For iOS home screen
+  },
 };

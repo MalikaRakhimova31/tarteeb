@@ -1,12 +1,18 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useState } from "react";
+import NumberFlow from "@number-flow/react";
 
 export default function Pricing() {
+  const [frequency, setFrequency] = useState<string>("yearly");
   const plans = [
     {
-      name: "Free",
+      name: "Solo Teacher",
       price: "Free",
       period: "forever",
       description:
@@ -24,9 +30,8 @@ export default function Pricing() {
     },
     {
       name: "Enterprise",
-      price: "$120",
+      price: frequency == "monthly" ? 120 : 100,
       period: "monthly",
-      discount: "Paid Yearly at $100 • 20% off",
       description: "Everything you need to build successful study center",
       features: [
         "Your branded bot",
@@ -44,7 +49,7 @@ export default function Pricing() {
   ];
 
   return (
-    <section id="pricing" className="py-20 px-4 bg-gray-50">
+    <section id="pricing" className="py-10 md:py-20 px-4 bg-gray-50">
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
         <div
@@ -62,13 +67,13 @@ export default function Pricing() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="flex item justify-center gap-8">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8">
           {plans.map((plan, index) => (
             <Card
               data-aos="zoom-out"
               data-aos-delay="200"
               key={index}
-              className={`relative group hover:shadow-xl transition-all duration-300 w-[35%] ${
+              className={`relative group hover:shadow-xl transition-all duration-300 w-[90%] md:w-[35%] ${
                 plan.popular
                   ? "border-1 border-purple-500 shadow-lg scale-105"
                   : "border-gray-200 hover:border-purple-200"
@@ -80,20 +85,54 @@ export default function Pricing() {
                 </Badge>
               )}
 
-              <CardHeader className="text-center pb-8">
+              <CardHeader className="text-center pb-4 md:pb-8">
                 <CardTitle className="text-2xl font-bold text-gray-900 mb-2">
                   {plan.name}
                 </CardTitle>
+                <div className="flex justify-center w-full py-2">
+                  {plan.popular && (
+                    <Tabs
+                      className=""
+                      defaultValue={frequency}
+                      onValueChange={setFrequency}
+                    >
+                      <TabsList>
+                        <TabsTrigger
+                          className="p-1 text-[12px]"
+                          value="monthly"
+                        >
+                          Monthly
+                        </TabsTrigger>
+                        <TabsTrigger value="yearly" className="p-1 text-[12px]">
+                          Yearly
+                          <Badge variant="secondary">16.7% off</Badge>
+                        </TabsTrigger>
+                      </TabsList>
+                    </Tabs>
+                  )}
+                </div>
                 <div>
-                  <span className="text-4xl md:text-5xl font-bold text-gray-900">
-                    {plan.price}
-                  </span>
+                  {typeof plan.price == "number" ? (
+                    <NumberFlow
+                      value={plan.price}
+                      format={{
+                        style: "currency",
+                        currency: "USD",
+                        maximumFractionDigits: 0,
+                      }}
+                      className="text-4xl md:text-5xl font-bold text-gray-900 min-w-[120px]"
+                    />
+                  ) : (
+                    <span className="text-4xl md:text-5xl font-bold text-gray-900">
+                      {plan.price}
+                    </span>
+                  )}
 
                   {plan.period && (
                     <span className="text-gray-600 ml-2">/{plan.period}</span>
                   )}
                 </div>
-                {<p className="text-sm text-[#6366F1]">{plan.discount}</p>}
+
                 <p className="text-gray-600">{plan.description}</p>
               </CardHeader>
 
@@ -134,7 +173,7 @@ export default function Pricing() {
         </div>
 
         {/* FAQ Section */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">
             Frequently Asked Questions
           </h3>
@@ -175,7 +214,7 @@ export default function Pricing() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

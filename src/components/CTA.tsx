@@ -14,17 +14,6 @@ export default function CTA() {
     "idle" | "success" | "error"
   >("idle");
 
-  // const generateId = () => {
-  //   return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
-  //     /[xy]/g,
-  //     function (c) {
-  //       const r = (Math.random() * 16) | 0;
-  //       const v = c === "x" ? r : (r & 0x3) | 0x8;
-  //       return v.toString(16);
-  //     }
-  //   );
-  // };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -63,7 +52,7 @@ export default function CTA() {
       } else {
         setSubmitStatus("error");
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -82,6 +71,7 @@ export default function CTA() {
 
   return (
     <section className="py-20 px-4 bg-gradient-to-br from-purple-600 via-purple-700 to-blue-600 relative">
+      {/* <section className="py-20 px-4 bg-gradient-to-br from-[#97F6F6] to-[#1DFCC8] relative"> */}
       <div className="container mx-auto max-w-4xl text-center">
         {/* Main CTA Content */}
         <div className="text-white mb-12 z-10">
