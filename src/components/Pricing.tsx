@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
+import NumberFlow, { type Value } from "@number-flow/react";
 
 export default function Pricing() {
   const [frequency, setFrequency] = useState<string>("yearly");
@@ -29,7 +30,7 @@ export default function Pricing() {
     },
     {
       name: "Enterprise",
-      price: frequency == "monthly" ? "$120" : "$100",
+      price: frequency == "monthly" ? 120 : 100,
       period: "monthly",
       description: "Everything you need to build successful study center",
       features: [
@@ -104,16 +105,28 @@ export default function Pricing() {
                         </TabsTrigger>
                         <TabsTrigger value="yearly" className="p-1 text-[12px]">
                           Yearly
-                          <Badge variant="secondary">20% off</Badge>
+                          <Badge variant="secondary">16.7% off</Badge>
                         </TabsTrigger>
                       </TabsList>
                     </Tabs>
                   )}
                 </div>
                 <div>
-                  <span className="text-4xl md:text-5xl font-bold text-gray-900">
-                    {plan.price}
-                  </span>
+                  {typeof plan.price == "number" ? (
+                    <NumberFlow
+                      value={plan.price}
+                      format={{
+                        style: "currency",
+                        currency: "USD",
+                        maximumFractionDigits: 0,
+                      }}
+                      className="text-4xl md:text-5xl font-bold text-gray-900 min-w-[120px]"
+                    />
+                  ) : (
+                    <span className="text-4xl md:text-5xl font-bold text-gray-900">
+                      {plan.price}
+                    </span>
+                  )}
 
                   {plan.period && (
                     <span className="text-gray-600 ml-2">/{plan.period}</span>
@@ -160,7 +173,7 @@ export default function Pricing() {
         </div>
 
         {/* FAQ Section */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">
             Frequently Asked Questions
           </h3>
@@ -201,7 +214,7 @@ export default function Pricing() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

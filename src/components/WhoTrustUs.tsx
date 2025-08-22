@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function WhoTrustUs() {
   const logos = [
     { src: "/images/nippon.svg", alt: "Nippon" },
-    { src: "/images/aloqa.svg", alt: "Aloqa" },
+    { src: "/images/aloqa.webp", alt: "Aloqa" },
     { src: "/images/Garage.svg", alt: "Garage" },
   ];
 
@@ -24,9 +24,9 @@ export default function WhoTrustUs() {
                 <Image
                   src={logo.src}
                   alt={logo.alt}
-                  width={180}
-                  height={60}
-                  className="object-contain"
+                  width={logo.alt == "Aloqa" ? "300" : 180}
+                  height={180}
+                  className={`${"object-contain"}`}
                 />
               </div>
             </div>

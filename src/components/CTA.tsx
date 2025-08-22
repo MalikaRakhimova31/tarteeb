@@ -71,6 +71,7 @@ export default function CTA() {
 
   return (
     <section className="py-20 px-4 bg-gradient-to-br from-purple-600 via-purple-700 to-blue-600 relative">
+      {/* <section className="py-20 px-4 bg-gradient-to-br from-[#97F6F6] to-[#1DFCC8] relative"> */}
       <div className="container mx-auto max-w-4xl text-center">
         {/* Main CTA Content */}
         <div className="text-white mb-12 z-10">
