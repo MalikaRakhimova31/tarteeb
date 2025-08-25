@@ -16,7 +16,7 @@ export default function Pricing() {
       price: "Free",
       period: "forever",
       description:
-        "The perfect plan for individual teachers with up to 20 students",
+        "The perfect plan for individual teachers with up to 10 students",
       features: [
         "Your branded bot",
         "1000 minutes of AI speaking",
