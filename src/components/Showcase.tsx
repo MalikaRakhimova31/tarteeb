@@ -2,13 +2,13 @@ import Image from "next/image";
 
 export default function Showcase() {
   return (
-    <section id="features" className="py-30 px-4 bg-gray-50 ">
+    <section id="features" className="py-10 md:py-30 px-4 bg-gray-50 ">
       <div className="container mx-auto max-w-6xl">
         {/* Admin Panel Feature */}
-        <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
+        <div className="flex flex-col md:flex-row items-start gap-12 lg:gap-16">
           {/* Left Side - Text Content */}
           <div
-            className="lg:w-1/2 space-y-8"
+            className="w-full md:w-1/2 space-y-8"
             data-aos="fade-right"
             data-aos-delay="200"
           >
@@ -66,33 +66,17 @@ export default function Showcase() {
           </div>
 
           {/* Right Side - Images */}
-          <div className="lg:w-[60%] space-y-6 flex relative items-start justify-center">
+          <div className="w-full md:w-[60%] space-y-6 flex relative items-start justify-center gap-6 md:gap-0">
             <div
-              className="absolute top-0 left-20 z-10"
+              className="relative md:absolute -top-20 md:left-0 z-0 md:z-10"
               data-aos="fade-up"
               data-aos-delay="200"
             >
               <Image
                 src="/images/lexi.webp"
                 alt="Admin Panel Dashboard"
-                width={250}
+                width={600}
                 height={300}
-                className="rounded-lg shadow border border-gray-200"
-              />
-              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div> */}
-            </div>
-
-            <div
-              className="absolute z-0 top-20 left-70"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
-              <Image
-                src="/images/alex.webp"
-                alt="Admin Panel Analytics"
-                width={250}
-                height={300}
-                className="rounded-lg shadow border border-gray-200"
               />
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div> */}
             </div>

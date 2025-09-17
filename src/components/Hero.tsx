@@ -3,9 +3,8 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
+import { Dialog, DialogContent } from "./ui/dialog";
 import { useState } from "react";
-import { X } from "lucide-react";
 
 export default function Hero() {
   const [open, setOpen] = useState(false);
@@ -14,7 +13,7 @@ export default function Hero() {
       <section className="relative bg-gradient-to-br from-purple-50 via-white to-blue-50 py-20 px-4">
         <div className="container mx-auto max-w-6xl text-center">
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-3xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             {/* Welcome to */}
             <Image
               src={"/images/tarteeb.svg"}
@@ -45,7 +44,7 @@ export default function Hero() {
               size="lg"
               className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 text-lg"
             >
-              Get Free Trial
+              See Pricing
             </Button>
             <Button
               variant="outline"
@@ -66,7 +65,7 @@ export default function Hero() {
         <DialogContent className="min-w-1/2 p-4 bg-white rounded-xl">
           <div className="relative w-full mt-8 h-[50vh] rounded overflow-hidden">
             <iframe
-              src="https://www.youtube.com/embed/1LEJFnAahMQ?autoplay=1&embeds_referring_euri=https%3A%2F%2Fwww.tarteeb.uz%2F&source_ve_path=MjM4NTE"
+              src="https://www.youtube.com/embed/dx9Cmx-arJM?autoplay=1&embeds_referring_euri=https%3A%2F%2Fwww.tarteeb.uz%2F&source_ve_path=MjM4NTE"
               title="Tarteeb Demo Video"
               className="absolute top-0 left-0 w-full h-full"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media;"

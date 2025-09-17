@@ -20,19 +20,19 @@ export default function DashboardPreview() {
 
         {/* Comparison Table */}
         <div className="relative w-full">
-          <div className="flex  justify-center gap-8 w-full items-stretch">
+          <div className="flex flex-col md:flex-row  justify-center gap-4 md:gap-8 w-full items-stretch">
             {/* Before Tarteeb */}
             <Card
-              className="bg-gray-50 border-gray-200 w-[40%]"
+              className="bg-gray-50 border-gray-200 w-full md:w-[40%]"
               data-aos="fade-right"
               data-aos-delay="200"
             >
-              <CardHeader className="text-center pb-4">
-                <CardTitle className="text-2xl font-bold text-gray-700">
+              <CardHeader className="text-center pb-0 md:pb-4">
+                <CardTitle className="text-lg md:text-2xl font-bold text-gray-700">
                   Before Tarteeb
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-2 md:space-y-4">
                 {[
                   "Students were not very motivated",
                   "No clear way to track attendance",
@@ -54,16 +54,16 @@ export default function DashboardPreview() {
 
             {/* After Tarteeb */}
             <Card
-              className="bg-purple-50 border-purple-200 w-[40%]"
+              className="bg-purple-50 border-purple-200 w-full md:w-[40%]"
               data-aos="fade-left"
               data-aos-delay="200"
             >
-              <CardHeader className="text-center pb-4">
-                <CardTitle className="text-2xl font-bold text-purple-700">
+              <CardHeader className="text-center pb-0 md:pb-4">
+                <CardTitle className="text-lg md:text-2xl font-bold text-purple-700">
                   After Tarteeb
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-2 md:space-y-4">
                 {[
                   "Students are more motivated to study on their own",
                   "Attendance is tracked with clear statistics, and parents are notified",

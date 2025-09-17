@@ -2,38 +2,23 @@ import Image from "next/image";
 
 export default function Features() {
   return (
-    <section id="admin" className="py-30 px-4 bg-gray-50">
+    <section id="admin" className="py-0 md:py-20 px-4 bg-gray-50">
       <div className="container mx-auto max-w-6xl">
         {/* Admin Panel Feature */}
-        <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
+        <div className="flex flex-col-reverse lg:flex-row items-start gap-12 lg:gap-16">
           {/* Right Side - Images */}
-          <div className="lg:w-[60%] space-y-6 flex relative items-start justify-center">
+          <div className="w-full md:w-[60%] space-y-6 flex relative items-start justify-center">
             <div
-              className="absolute top-0 left-10 z-0"
+              className="relative md:absolute top-0 md:left-10 z-0 scale-x-[-1]"
               data-aos="fade-right"
               data-aos-delay="400"
             >
               <Image
                 src="/images/admin-1.webp"
                 alt="Admin Panel Dashboard"
-                width={600}
+                width={800}
                 height={600}
-                className="rounded-lg shadow border border-gray-200"
-              />
-              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div> */}
-            </div>
-
-            <div
-              className="absolute z-10 top-50 -left-10 "
-              data-aos="fade-right"
-              data-aos-delay="600"
-            >
-              <Image
-                src="/images/admin-2.webp"
-                alt="Admin Panel Analytics"
-                width={600}
-                height={400}
-                className="rounded-lg shadow-lg border border-gray-200"
+                // layout="responsive"
               />
               {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div> */}
             </div>

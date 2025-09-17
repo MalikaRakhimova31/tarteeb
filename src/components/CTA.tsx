@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 export default function CTA() {
   return (
     <section className="py-20 px-4 bg-gradient-to-br from-purple-600 via-purple-700 to-blue-600 relative">
+      {/* <section className="py-20 px-4 bg-gradient-to-br from-[#97F6F6] to-[#1DFCC8] relative"> */}
       <div className="container mx-auto max-w-4xl text-center">
         <div className="text-white mb-12 z-10">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">

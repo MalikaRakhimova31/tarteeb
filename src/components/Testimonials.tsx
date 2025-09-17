@@ -29,7 +29,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section id="testimonials" className="py-20 px-4 bg-white">
+    <section id="testimonials" className="py-10 md:py-20 px-4 bg-white">
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-16">
