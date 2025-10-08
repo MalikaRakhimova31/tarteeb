@@ -66,7 +66,10 @@ export default function Showcase() {
           </div>
 
           {/* Right Side - Images */}
-          <div className="w-full md:w-[60%] space-y-6 flex relative items-start justify-center gap-6 md:gap-0">
+          <div
+            // ref={tiltRef}
+            className="w-full md:w-[60%] space-y-6 flex relative items-start justify-center gap-6 md:gap-0"
+          >
             <div
               className="relative md:absolute -top-20 md:left-0 z-0 md:z-10"
               data-aos="fade-up"

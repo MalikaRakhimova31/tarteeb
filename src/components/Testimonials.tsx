@@ -1,32 +1,72 @@
+"use client";
 import { Card, CardContent } from "@/components/ui/card";
+import { useEffect, useRef, useCallback } from "react";
+import VanillaTilt from "vanilla-tilt";
+
+interface VanillaTiltElement extends HTMLElement {
+  vanillaTilt?: {
+    destroy: () => void;
+  };
+}
+
+const TILT_OPTIONS = {
+  max: 20,
+  speed: 1000,
+  glare: true,
+  scale: 1.02,
+  "max-glare": 0.2,
+} as const;
+
+const TESTIMONIALS = [
+  {
+    name: "Lingo Pro LC - Bukhara",
+    role: "SEO",
+    company: "Lingo Pro LC - Bukhara",
+    image: "/api/placeholder/40/40",
+    rating: 5,
+    text: "Never have I thought that tarteeb website would be of so much importance to the way we do our job. rarely a day passes without parents being notified about how successful their children are doing in our center.",
+  },
+  {
+    name: "Marcus Rodriguez",
+    role: "Engineering Lead",
+    company: "Smart School - Farg'ona",
+    image: "/api/placeholder/40/40",
+    rating: 5,
+    text: "Tarteeb is a thoughtfully designed platform built to streamline the work of educational centers. It helps us stay closely connected with students and their parents, making it the smart choice for both",
+  },
+  {
+    name: "Emily Watson",
+    role: "Marketing Director",
+    company: "Buxoro School - Tashkent",
+    image: "/api/placeholder/40/40",
+    rating: 5,
+    text: "This platform has brought great value to our educational center, and our students' parents couldn't be happier. They receive automatic updates on their child's attendance, even without internet access, directly to their mobile phones. With new features added regularly based on feedback, the platform keeps making our work easier every day.",
+  },
+] as const;
 
 export default function Testimonials() {
-  const testimonials = [
-    {
-      name: "Lingo Pro LC - Bukhara",
-      role: "SEO",
-      company: "Lingo Pro LC - Bukhara",
-      image: "/api/placeholder/40/40",
-      rating: 5,
-      text: "Never have I thought that tarteeb website would be of so much importance to the way we do our job. rarely a day passes without parents being notified about how successful their children are doing in our center.",
-    },
-    {
-      name: "Marcus Rodriguez",
-      role: "Engineering Lead",
-      company: "Smart School - Farg'ona",
-      image: "/api/placeholder/40/40",
-      rating: 5,
-      text: "Tarteeb is a thoughtfully designed platform built to streamline the work of educational centers. It helps us stay closely connected with students and their parents, making it the smart choice for both",
-    },
-    {
-      name: "Emily Watson",
-      role: "Marketing Director",
-      company: "Buxoro School - Tashkent",
-      image: "/api/placeholder/40/40",
-      rating: 5,
-      text: "This platform has brought great value to our educational center, and our students’ parents couldn’t be happier. They receive automatic updates on their child’s attendance, even without internet access, directly to their mobile phones. With new features added regularly based on feedback, the platform keeps making our work easier every day.",
-    },
-  ];
+  const tiltRefs = useRef<VanillaTiltElement[]>([]);
+
+  const addToRefs = useCallback((el: HTMLDivElement | null, index: number) => {
+    if (el && !tiltRefs.current[index]) {
+      tiltRefs.current[index] = el as VanillaTiltElement;
+    }
+  }, []);
+
+  useEffect(() => {
+    tiltRefs.current.forEach((element) => {
+      if (element && !element.vanillaTilt) {
+        VanillaTilt.init(element, TILT_OPTIONS);
+      }
+    });
+
+    return () => {
+      tiltRefs.current.forEach((element) => {
+        element?.vanillaTilt?.destroy();
+      });
+      tiltRefs.current = [];
+    };
+  }, []);
 
   return (
     <section id="testimonials" className="py-10 md:py-20 px-4 bg-white">
@@ -43,9 +83,10 @@ export default function Testimonials() {
 
         {/* Testimonials Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
+          {TESTIMONIALS.map((testimonial, index) => (
             <Card
               key={index}
+              ref={(el) => addToRefs(el, index)}
               className="group hover:shadow-lg transition-all duration-300 border-0 bg-gray-50"
               data-aos="zoom-in"
               data-aos-delay="200"
