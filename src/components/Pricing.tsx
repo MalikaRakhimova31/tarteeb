@@ -26,11 +26,11 @@ export default function Pricing() {
         cta: "Get Started Free",
         popular: false,
         comments: "",
-        link: "https://t.me/m/86rEuvWvNDIy",
+        link: "https://portal.tarteeb.uz/login",
       },
       {
         name: "Pro",
-        price: frequency == "monthly" ? 300000 : 249900,
+        price: frequency == "monthly" ? 290000 : 241000,
         period: "monthly",
         description: "Everything in Free plan plus advanced features",
         features: [
