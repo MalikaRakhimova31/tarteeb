@@ -77,7 +77,7 @@ export default function Navigation() {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Link href={"https://portal.tarteeb.uz/login"}>
+            <Link href={"https://portal.tarteeb.uz/signup"}>
               <Button
                 variant="ghost"
                 className="text-gray-600 hover:text-gray-900 cursor-pointer"
@@ -153,7 +153,7 @@ export default function Navigation() {
                 Contact us
               </a>
               <div className="flex flex-col gap-2 pt-4 border-t border-gray-200">
-                <Link href={"https://portal.tarteeb.uz/login"}>
+                <Link href={"https://portal.tarteeb.uz/signup"}>
                   <Button
                     variant="ghost"
                     className="justify-start cursor-ponter"

@@ -26,7 +26,7 @@ export default function Pricing() {
         cta: "Get Started Free",
         popular: false,
         comments: "",
-        link: "https://portal.tarteeb.uz/login",
+        link: "https://portal.tarteeb.uz/signup",
       },
       {
         name: "Pro",
